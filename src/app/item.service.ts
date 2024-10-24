@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ItemService {
-  private apiUrl = 'https://localhost:44359/api/Item'; // Base URL
+  private apiUrl = 'https://rutwikappservice.azurewebsites.net/api/Item'; // Base URL
 
   constructor(private http: HttpClient) {}
 
