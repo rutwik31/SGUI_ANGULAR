@@ -1,0 +1,42 @@
+<form id="ItemPortel">
+    <div class="form-group">
+      <label for="itemName">Item Name:</label>
+      <input 
+        id="itemName" 
+        name="itemName" 
+        [(ngModel)]="itemName" 
+        type="text" 
+        placeholder="Item Name"
+      >
+    </div>
+    <div class="form-group">
+      <label for="itemDescription">Item Description:</label>
+      <input 
+        id="itemDescription" 
+        name="itemDescription"
+        [(ngModel)]="itemDescription"
+        type="text" 
+        placeholder="Item Description" 
+      >
+    </div>
+    <div class="form-group">
+      <button type="button" (click)="onSubmit()">Save Item</button>
+    </div>
+</form>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Item Name</th>
+      <th>Item Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of lstItemDetails">
+      <td>{{ item.itemId }}</td>
+      <td>{{ item.itemName }}</td>
+      <td>{{ item.itemDescription }}</td>
+    </tr>
+  </tbody>
+</table>
+
